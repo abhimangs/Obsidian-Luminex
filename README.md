@@ -1,1 +1,1 @@
-# Obsidian-Luminex
+# Obsidian Theme: Luminex
