@@ -35,7 +35,7 @@ For best results, ensure you have the latest versions of these plugins installed
 ## Feedback
 
 For any issues or feature requests, please open an issue in the repository.
-
+Email: theabhimangs@gmail.com
 ---
 
 *Enjoy your experience with the Luminex theme!*
