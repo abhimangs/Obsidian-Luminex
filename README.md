@@ -1,18 +1,41 @@
-# Obsidian Theme - Luminex
+# Luminex Theme for Obsidian
 
-**Luminex** is a minimalist and colorful dark theme for Obsidian that enhances your note-taking experience with vibrant colors and a clean design. The theme focuses on providing a sleek, modern interface while keeping the user experience straightforward and enjoyable.
+![Luminex Cover Image](Imh/cover.png)
 
 ## Features
 
-- **Minimalist Design**: A clean layout that emphasizes content without distractions.
-- **Colorful Accents**: Bright, contrasting colors to enhance visibility and readability.
-- **Responsive Styles**: Optimized for both desktop and mobile views.
-- **Customizable**: Easily override CSS variables to personalize your experience.
+- **Aesthetic Design:** A modern and sleek interface that enhances your Obsidian experience.
+- **Customizable Colors:** Easily change the color scheme to suit your preference.
+- **Responsive Layout:** Optimized for both desktop and mobile views.
 
 ## Installation
 
-1. Download the **Luminex** theme files.
-2. Open Obsidian and navigate to **Settings** > **Appearance**.
-3. Under **Themes**, click on **Manage** and then **Open theme folder**.
-4. Place the **Luminex** theme folder in the opened directory.
-5. Return to **Settings** > **Appearance**, find **Luminex** in the **Themes** dropdown, and select it.
+1. Download the Luminex theme from the repository.
+2. Open Obsidian and go to **Settings** > **Appearance**.
+3. In the **Themes** section, click on **Manage**.
+4. Click on **Open Themes Folder**.
+5. Place the downloaded theme file in the folder.
+6. Select the Luminex theme from the list of installed themes.
+
+## Settings
+
+- To customize the colors, navigate to **Settings** > **Appearance** > **CSS Snippets**.
+- Enable the desired snippets to apply the custom styles.
+
+## Plugin Support
+
+Luminex theme is compatible with popular plugins like:
+
+- **Daily Notes**
+- **Calendar**
+- **Kanban**
+
+For best results, ensure you have the latest versions of these plugins installed.
+
+## Feedback
+
+For any issues or feature requests, please open an issue in the repository.
+
+---
+
+*Enjoy your experience with the Luminex theme!*
