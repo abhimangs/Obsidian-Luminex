@@ -2,5 +2,6 @@
     "name": "Luminex",
     "version": "1.0",
     "author": "@abhimangs",
+    "minAppVersion": "1.1.0",
     "authorUrl": "https://github.com/abhimangs"
 }
