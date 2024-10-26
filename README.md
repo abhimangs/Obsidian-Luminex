@@ -1,6 +1,6 @@
 # Luminex Theme for Obsidian
 
-![Luminex Cover Image](Img/Cover.png)
+![Luminex Cover Image](Assets/Obsidian-Cover.png)
 
 ## Features
 
