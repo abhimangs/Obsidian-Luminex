@@ -1,23 +1,28 @@
-/*
-   Currently only comes in dark theme
-*/
+/*---------------------------------------------------------------
+ *                                                               *
+ *                           LUMINEX                             *
+ *                         Version 2.0                           *
+ *                     Created by @abhimangs                     *
+ *                                                               *
+ *  Readme:                                                      *
+ *  https://github.com/abhimangs/Obsidian-Luminex                *
+ *                                                               *
+ *  For problems, contact:                                       *
+ *  theabhimangs@gmail.com                                       *
+ *                                                               *
+ *---------------------------------------------------------------*/
 
-.theme-dark {
-  --background-primary: #111111;
-  --background-primary-alt: #0d0b12;
-  --background-secondary: #1A1A1A;
-  --background-secondary-alt: #0d0b12;
-  --text-normal: #bebebe;
-  --text-accent: #0fb6d6;
+/* ~~~~~~~~ Color - LIGHT theme ~~~~~~~ */
+.theme-light {
+  --background-primary: #ffffff;
+  --background-primary-alt: #ffffff;
+  --background-secondary: #eeeeee;
+  --background-secondary-alt: #eeeeee;
+  --text-normal: hsl(0, 0%, 7%);
+  --text-accent: #15d7fe;
   --text-sub-accent: #f4569d;
   --text-dim: #45aaff;
   --text-faint: #7aa2f7;
-  --text-title-h1: #0fb6d6;
-  --text-title-h2: #2ECC71;
-  --text-title-h3: #7DF9FF;
-  --text-title-h4: #FF8C00;
-  --text-title-h5: #FF00FF;
-  --text-title-h6: #FF1493;
   --text-link: #b4b4b4;
   --text-a: #6bcafb;
   --text-a-hover: #6bcafb;
@@ -34,99 +39,72 @@
   --bg-sub-accent-55: rgba(244, 86, 157, 0.55);
   --bg-accent-55: rgba(14, 210, 247, 0.55);
   --bg-accent-25: rgba(14, 210, 247, 0.25);
-  --text-highlight-bg: rgba(244, 86, 157, 0.25);
+  --text-highlight-bg: rgba(255, 22, 127, 0.416);
   --background-modifier-border: rgba(14, 210, 247, 0.05);
   --table-border-color: rgba(0, 213, 255, 0.744);
   --test-color: rgb(126, 122, 247);
   --editor-border-color: #101014;
+  --less-opacity-accent: #00bfff46;
+}
+
+/* ~~~~~~~~ ColoR - DARK theme ~~~~~~~ */
+.theme-dark {
+  --background-primary: #111111;
+  --background-primary-alt: #0d0b12;
+  --background-secondary: #1a1a1a;
+  --background-secondary-alt: #0d0b12;
+  --text-normal: #bebebe;
+  --text-accent: #1ed9ff;
+  --text-sub-accent: #f4569d;
+  --text-dim: #45aaff;
+  --text-faint: #7aa2f7;
+  --text-link: #b4b4b4;
+  --text-a: #6bcafb;
+  --text-a-hover: #6bcafb;
+  --text-mark: #263d92;
+  --code-background: var(--background-secondary);
+  --interactive-accent: rgba(14, 210, 247, 0.5);
+  --interactive-accent-hover: rgba(14, 210, 247, 0.8);
+  --interactive-before: #5e6565;
+  --blockquote-border: #4aa8fb;
+  --tag-background: rgba(14, 210, 247, 0.15);
+  --interactive-accent-rgb: #3dd7fb;
+  --font-family-editor: 'Rubik';
+  --font-family-preview: 'Rubik';
+  --bg-sub-accent-55: rgba(244, 86, 157, 0.55);
+  --bg-accent-55: rgba(14, 210, 247, 0.55);
+  --bg-accent-25: rgba(14, 210, 247, 0.25);
+  --text-highlight-bg: rgba(255, 68, 152, 0.6);
+  --background-modifier-border: rgba(14, 210, 247, 0.05);
+  --table-border-color: rgba(0, 213, 255, 0.744);
+  --test-color: rgb(126, 122, 247);
+  --editor-border-color: #101014;
+  --less-opacity-accent: #00bfff13;
 }
 
 :root {
-  /***************************************/
-  /*    FONTS RELATED                    */
-  /***************************************/
+  /* FONTS STYLING */
+  --default-font: Rubik, Segoe UI, Roboto, Arial, sans-serif, sans-serif;
 
-  /** Font Customization **/
-  --default-font: 'Rubik', 'Glow Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;
+  /* Heading Color Styling */
+  --text-title-h1: #06cef6;
+  --text-title-h2: #2ECC71;
+  --text-title-h3: #526fff;
+  --text-title-h4: #c7c400;
+  --text-title-h5: #FF00FF;
+  --text-title-h6: #ff5757;
 
-  --default-font-size: 18px;
+  /* Hovering the folder & file names */
+  --hover-file : #00d5ff89; 
 
-  /** Main text font weight **/
-  --body-font-weight: 450;
-
-  /** Font family for hash-tags **/
-  --tag-font-family: 'OperatorMonoSSmLig-Book', 'Glow Sans SC', '华文细黑', 'STXihei', 'PingFang TC',
-    '微软雅黑体', 'Microsoft YaHei New', '微软雅黑', 'Microsoft Yahei', '宋体', 'SimSun',
-    'Helvetica Neue', 'Helvetica', Arial, sans-serif !important;
-
-  /** Font specially for codes **/
-  --code-mono-font: 'OperatorMonoSSmLig-Book';
-}
-
-/**-------------------**
-| CUSTOMIZED TAG COLOURS
-**--------------------**/
-
-/* For preview mode */
-a.tag[href*='#todo'],
-a.tag[href*='#待完成'] {
-  background-color: #be2e5e;
-  color: #fff;
-}
-/* For Editor Mode */
-.cm-s-obsidian .CodeMirror-line span.cm-tag-todo:not(.cm-formatting-hashtag) {
-  color: #ee6a96;
-}
-
-a.tag[href*='#working-draft'],
-a.tag[href*='#进行中'] {
-  background-color: #4d3ca6;
-  color: #fff;
-}
-
-.cm-s-obsidian .CodeMirror-line span.cm-tag-working-draft:not(.cm-formatting-hashtag) {
-  color: #a897ff;
-}
-
-a.tag[href*='#notes'],
-a.tag[href*='#笔记'] {
-  background-color: #17b978;
-  color: #fff;
-}
-
-.cm-s-obsidian .CodeMirror-line span.cm-tag-notes:not(.cm-formatting-hashtag) {
-  color: #45e0a2;
-}
-
-a.tag[href*='#knowledge'],
-a.tag[href*='#知识'] {
-  background-color: #005792;
-  color: #fff;
-}
-
-.cm-s-obsidian .CodeMirror-line span.cm-tag-knowledge:not(.cm-formatting-hashtag) {
-  color: #6cbdf3;
-}
-
-a.tag[href*='#writing'],
-a.tag[href*='#文章'] {
-  background-color: #f95959;
-  color: #fff;
-}
-
-.cm-s-obsidian .CodeMirror-line span.cm-tag-writing:not(.cm-formatting-hashtag) {
-  color: #ff7a7a;
-}
-
-a.tag[href*='#ideas'],
-a.tag[href*='#想法'] {
-  background-color: #ffc93c;
-  color: #000;
-}
-
-.cm-s-obsidian .CodeMirror-line span.cm-tag-ideas:not(.cm-formatting-hashtag) {
-  color: #ffdc82;
+  /* HEADING GRADIENT UNDERLINE STYLES */
+  /* Ensure the last color matches or complements your background */
+  --gradient-h1: linear-gradient(to right, #00c8ff, #ff00d0, #111111 90%);
+  --gradient-h2: linear-gradient(to right, #FDC830, #F37335, #111111 70%);
+  --gradient-h3: linear-gradient(to right, #ff1793, #ca0aff, #111111 60%);
+  --gradient-h4: linear-gradient(to right, #9D50BB, #6E48AA, #111111 50%);
+  --gradient-h5: linear-gradient(to right, #43E97B, #38F9D7, #111111 40%);
+  --gradient-h6: linear-gradient(to right, #fc46c2, #3F5EFB, #111111 30%);
 }
 
 /**************************************
@@ -154,10 +132,12 @@ a.tag[href*='#想法'] {
   opacity: 0.7;
 }
 
+/* Title bar colour */
 .titlebar {
   background-color: var(--background-primary-alt);
 }
 
+/* Status bar at the bottom right coner */
 .status-bar {
   background-color: var(--background-primary-alt);
   border-color: #101014;
@@ -208,7 +188,7 @@ a.tag[href*='#想法'] {
   color: var(--text-accent);
 }
 
-/** Side-dock icons **/
+/** Left side tool bar styling + hover **/
 .side-dock-ribbon-tab,
 .side-dock-ribbon-action,
 .workspace-ribbon-collapse-btn,
@@ -217,6 +197,7 @@ a.tag[href*='#想法'] {
   opacity: 0.5;
   cursor: pointer;
 }
+
 .side-dock-ribbon-tab:hover,
 .side-dock-ribbon-action:hover,
 .workspace-ribbon-collapse-btn:hover,
@@ -228,6 +209,7 @@ a.tag[href*='#想法'] {
 /** Left side menu -- collapsed **/
 .workspace-ribbon.is-collapsed {
   background-color: var(--background-primary-alt);
+
 }
 /** Left side menu border **/
 .workspace-ribbon.mod-left.is-collapsed,
@@ -238,25 +220,48 @@ a.tag[href*='#想法'] {
 /** Navigation tabs **/
 .is-focused .workspace-tab-header.is-active {
   opacity: 1;
+  color: var(--text-accent);
 }
 
+.workspace-tab-header.is-active {
+  opacity: 1;
+  color: var(--text-accent); /* Active tab text color */
+}
+
+
+/* Title of the file opened in the top tab */
 .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
 .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
-  background: var(--background-modifier-border);
   color: var(--text-accent);
+  text-shadow: 0 0 0.5em var(--text-accent) !important;
 }
 
+/* Active file and folder styling */
 .nav-file-title.is-active,
 .nav-folder-title.is-active {
-  background: var(--background-secondary);
-  border: 1px solid var(--bg-accent-25);
+  background: var(--less-opacity-accent);
+  border: 2px solid var(--bg-accent-25);
   color: var(--text-accent);
+  text-shadow: 0 0 0.25em var(--text-accent);
 }
 
+/* Hovering Over the folder and files */
 body:not(.is-grabbing) .nav-file-title:hover,
 body:not(.is-grabbing) .nav-folder-title:hover {
   background: var(--background-modifier-border);
   border: 1px solid var(--interactive-accent-hover);
+  /* Inner and outer glow effect */
+  box-shadow: inset 0 0 5px var(--hover-file), /* Inner glow */
+              0 0 8px var(--hover-file); /* Outer glow with slightly increased blur */
+  
+  transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Top right window icons */
+.titlebar-button.mod-minimize:hover,
+.titlebar-button.mod-maximize:hover,
+.titlebar-button.mod-close:hover{
+  color: var(--text-accent);
 }
 
 /** Folder Lists **/
@@ -273,6 +278,14 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
 .nav-folder.mod-root > .nav-file-title,
 .nav-folder.mod-root > .nav-folder-title {
   color: var(--text-accent);
+}
+
+/* Metadata Styling */
+.metadata-property:hover,
+.metadata-add-button.text-icon-button:hover {
+  border: 1px solid var(--text-accent);
+  background-color: var(--less-opacity-accent);
+  transition: 0.5s;
 }
 
 /** View Header title **/
@@ -312,135 +325,12 @@ span.cm-formatting-list,
   padding-top: 0;
 }
 
-/* OBSIDIANITE CHECKBOXES */
+/* **************************************************** */
+/* *                                                  * */
+/* *                 HEADINGS SECTION                 * */
+/* *                                                  * */
+/* **************************************************** */
 
-.contains-task-list .task-list-item .contains-task-list {
-  padding-inline-start: 5px;
-}
-
-.contains-task-list .task-list-item ul.contains-task-list::before {
-  left: -46px !important;
-  border-width: 2px;
-}
-
-.contains-task-list .task-list-item {
-  position: relative;
-  vertical-align: middle;
-  box-sizing: border-box;
-  padding-left: 30px;
-}
-
-.markdown-preview-view ul > li.task-list-item {
-  text-indent: -3em;
-}
-
-.contains-task-list .task-list-item input[type='checkbox'] {
-  position: relative;
-  top: 2px;
-  left: -8px;
-  width: 20px;
-  height: 20px;
-  margin: 0;
-  opacity: 0;
-  z-index: 10;
-}
-
-.markdown-preview-view .list-collapse-indicator {
-  margin-left: -80px !important;
-  box-sizing: border-box;
-}
-
-.contains-task-list .task-list-item::before {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: -25px;
-  width: 20px;
-  height: 20px;
-  display: inline-flex;
-  justify-content: center;
-  border: 2px solid #9e9e9e;
-  margin-right: 15px;
-  border-radius: 3px;
-  transition: all 0.3s;
-  box-sizing: border-box;
-  z-index: 1;
-}
-
-.contains-task-list .is-checked.task-list-item::before {
-  border: 10px solid #42ecff;
-  animation: bounce 300ms;
-}
-
-.contains-task-list .is-checked.task-list-item::after {
-  content: '';
-  position: absolute;
-  top: 8px;
-  left: -21px;
-  border-right: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  transform: rotate(45deg);
-  transform-origin: 0% 100%;
-  animation: checked-box 125ms 250ms forwards;
-  z-index: 5;
-}
-
-.markdown-preview-view ul > li.task-list-item.is-checked {
-  text-decoration: line-through !important;
-  color: #42ecff !important;
-}
-
-.markdown-preview-view ul > li.task-list-item.is-checked ul > li:not(.is-checked) {
-  text-decoration: none !important;
-  color: var(--text-normal) !important;
-}
-
-@keyframes checked-box {
-  0% {
-    width: 0;
-    height: 0;
-    border-color: #212121;
-    transform: translate(0, 0) rotate(45deg);
-  }
-  33% {
-    width: 4px;
-    height: 0;
-    border-color: #212121;
-    transform: translate(0, 0) rotate(45deg);
-  }
-  100% {
-    width: 4px;
-    height: 8px;
-    border-color: #212121;
-    transform: translate(0, -8px) rotate(45deg);
-  }
-}
-
-@keyframes bounce {
-  0% {
-    border-width: 2px;
-    /* transform: scale(1); */
-  }
-  33% {
-    border-width: 4px;
-    /* transform: scale(0.7); */
-  }
-  100% {
-    border-width: 10px;
-    /* transform: scale(1); */
-  }
-}
-
-/**************************************
-| MAIN EDITOR / PREVIEW MODE
-| -------------------------------------
-| Write in the same section to keep them
-| relatively sync with css.
-/**************************************/
-
-/**-------------------**
-| HEADING STYLES
-**--------------------**/
 h1,
 h2,
 h3,
@@ -464,30 +354,30 @@ h6 {
   border-bottom: 2.5px solid;  /* Slightly thicker border for H1 */
   border-width: 2.5px;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to right, #00c8ff, #ff00d0, #100e17 90%);
+  border-image-source: var(--gradient-h1);
 }
 
 .HyperMD-header.HyperMD-header-2 {
   border-bottom: 2px solid;  /* Slightly thicker border for H2 */
   border-width: 2px;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to right, #FDC830, #F37335, #100e17 70%);
+  border-image-source: var(--gradient-h2);
 }
 
 .HyperMD-header.HyperMD-header-3 {
-  border-image-source: linear-gradient(to right, #ff1793, #ca0aff, #100e17 60%);
+  border-image-source: var(--gradient-h3);
 }
 
 .HyperMD-header.HyperMD-header-4 {
-  border-image-source: linear-gradient(to right,#9D50BB, #6E48AA, #100e17 50%);
+  border-image-source: var(--gradient-h4);
 }
 
 .HyperMD-header.HyperMD-header-5 {
-  border-image-source: linear-gradient(to right,#43E97B, #38F9D7, #100e17 40%);
+  border-image-source: var(--gradient-h5);
 }
 
 .HyperMD-header.HyperMD-header-6 {
-  border-image-source: linear-gradient(to right, #FC466B, #3F5EFB, #100e17 30%);
+  border-image-source: var(--gradient-h6);
 }
 
 .HyperMD-header {
@@ -546,32 +436,32 @@ h6 {
 
 .markdown-preview-view h1{
   border-bottom: 2.5px solid;
-  border-image-source: linear-gradient(to right, #00c8ff, #ff00d0, #100e17 90%);
+  border-image-source: var(--gradient-h1);
 }
 
 .markdown-preview-view h2{
   border-bottom: 2px solid;
-  border-image-source: linear-gradient(to right, #FDC830, #F37335, #100e17 70%);
+  border-image-source: var(--gradient-h2);
 }
 
 .markdown-preview-view h3{
   border-bottom: 1px solid;
-  border-image-source: linear-gradient(to right, #ff1793, #ca0aff, #100e17 60%);
+  border-image-source: var(--gradient-h3);
 }
 
 .markdown-preview-view h4{
   border-bottom: 1px solid;
-  border-image-source: linear-gradient(to right,#9D50BB, #6E48AA, #100e17 50%);
+  border-image-source: var(--gradient-h4);
 }
 
 .markdown-preview-view h5{
   border-bottom: 1px solid;
-  border-image-source: linear-gradient(to right,#43E97B, #38F9D7, #100e17 40%);
+  border-image-source: var(--gradient-h5);
 }
 
 .markdown-preview-view h6{
   border-bottom: 1px solid;
-  border-image-source: linear-gradient(to right, #FC466B, #3F5EFB, #100e17 30%);
+  border-image-source: var(--gradient-h6);
 }
 .view-header-icon {
   color: var(--text-accent);
@@ -584,10 +474,44 @@ h6 {
   opacity: 0.45;
 }
 
-/**-------------------**
-| HR STYLES
-**--------------------**/
-/** hr styles -- PREVIEW MODE */
+/* Heading styling - Glow effect */
+
+.cm-header-1:not(.cm-formatting),
+h1 {
+  text-shadow: 0 0 0.5em var(--text-title-h1);
+}
+
+.cm-header-2:not(.cm-formatting),
+h2 {
+  text-shadow: 0 0 0.5em var(--text-title-h2);
+}
+
+.cm-header-3:not(.cm-formatting),
+h3 {
+  text-shadow: 0 0 0.5em var(--text-title-h3);
+}
+
+.cm-header-4:not(.cm-formatting),
+h4 {
+  text-shadow: 0 0 0.5em var(--text-title-h4);
+}
+
+.cm-header-5:not(.cm-formatting),
+h5 {
+  text-shadow: 0 0 0.5em var(--text-title-h5);
+}
+
+.cm-header-6:not(.cm-formatting),
+h6 {
+  text-shadow: 0 0 0.5em var(--text-title-h6);
+}
+
+/* +-------------------------------------------------+ */
+/* |                                                 | */
+/* |           HR STYLING - Horizontal Line          | */
+/* |                                                 | */
+/* +-------------------------------------------------+ */
+
 .cm-line hr,
 .markdown-preview-view hr {
   margin-block-start: 2em;
@@ -600,16 +524,16 @@ h6 {
   border-image-source: linear-gradient(
   to right,
   rgba(0, 255, 255, 0) 0%,
-  #9400D3 20%,
+  #9400D3 25%,
   #1E90FF 50%,
-  #9400D3 80%,
+  #9400D3 75%,
   rgba(0, 255, 255, 0) 100%
   );
 }
 
 .cm-line hr::after,
 .markdown-preview-view hr::after {
-  content: '❄';
+  content: '☀';
   display: inline-block;
   position: absolute;
   left: 50%;
@@ -617,22 +541,25 @@ h6 {
   transform-origin: 50% 50%;
   padding: 0.05rem;
   color: var(--text-sub-accent);
+  text-shadow: 0 0 0.5em var(--text-sub-accent);
   background-color: var(--background-primary);
 }
 
 
-/**-------------------**
-| STRONG/BOLD STYLES
-**--------------------**/
+/* +-------------------------------------------------+ */
+/* |                                                 | */
+/* |                    BOLD TEXT                    | */
+/* |                                                 | */
+/* +-------------------------------------------------+ */
 
 .cm-strong,
 strong {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   padding: 0;
-  color: #7aa2f7;
-  background-color: #7aa2f7;
-  background-image: linear-gradient(135deg, #00bfff, #ff69b4) !important;
+  background-image: linear-gradient(135deg, #00bfff, #ff69b4);
+  background-clip: text;
+  -webkit-background-clip: text; /* Vendor prefix for WebKit browsers */
+  color: transparent; /* Ensure text is transparent to show gradient */
+  -webkit-text-fill-color: transparent; /* Ensures color fill doesn't interfere */
 }
 
 strong .math.math-inline .MathJax {
@@ -644,23 +571,23 @@ strong::selection {
   -webkit-text-fill-color: var(--text-faint);
 }
 
-/**-------------------**
-| <KBD> STYLING
-**--------------------**/
-
 .cm-strong kbd,
 strong kbd {
   -webkit-text-fill-color: initial;
 }
 
-/**-------------------**
-| ITALIC STYLES
-**--------------------**/
+/* +-------------------------------------------------+ */
+/* |                                                 | */
+/* |                  ITALIC STYLING                 | */
+/* |                                                 | */
+/* +-------------------------------------------------+ */
+
 
 .cm-em,
 em {
-  color: #bb9af7 !important;
+  color: #ea00ff !important;
   font-family: OperatorMonoSSmLig-Book, Rubik, var(--default-font) !important;
+  font-style: italic;
 }
 
 .cm-em.cm-formatting-em {
@@ -670,10 +597,11 @@ em {
   vertical-align: text-top;
 }
 
-/**-------------------**
-| LISTING STYLES (ul, li, ol)
-**--------------------**/
-
+/* +-------------------------------------------------+ */
+/* |                                                 | */
+/* |                LISTING STYLES                   | */
+/* |                                                 | */
+/* +-------------------------------------------------+ */
 .cm-s-obsidian span.cm-formatting-list {
   color: var(--text-accent);
 }
@@ -682,7 +610,7 @@ em {
   border-width: 2px;
   border-color: var(--text-accent);
   margin-left: -1px;
-  opacity: 0.35;
+  opacity: 0.40;
   transition: opacity 500ms linear ease-in-out;
 }
 
@@ -690,9 +618,11 @@ em {
   opacity: 0.8;
 }
 
-/**-------------------**
-| LINKS STYLING
-**--------------------**/
+/* +-------------------------------------------------+ */
+/* |                                                 | */
+/* |                    LINK STYLING                 | */
+/* |                                                 | */
+/* +-------------------------------------------------+ */
 
 /** editor mode **/
 .cm-s-obsidian span.cm-link:not(.cm-formatting-link) .cm-underline,
@@ -701,7 +631,7 @@ em {
   -webkit-text-fill-color: var(--text-normal);
   background-position: 0 100%;
   background-repeat: repeat-x;
-  background-size: 5px 5px;
+  background-size: 5px 2px;
   text-decoration: none;
 }
 
@@ -728,7 +658,7 @@ cm-s-obsidian span.cm-link:not(.cm-formatting-link) .cm-underline {
   color: var(--text-normal);
   background-position: 0 100%;
   background-repeat: repeat-x;
-  background-size: 5px 5px;
+  background-size: 5px 2px;
   text-decoration: none;
   transition: background 350ms ease-in-out;
 }
@@ -794,10 +724,11 @@ a:hover,
   color: var(--text-accent);
 }
 
-/**-------------------**
-| TAG STYLING
-**--------------------**/
-
+/* +-------------------------------------------------+ */
+/* |                                                 | */
+/* |                  TAG STYLING                    | */
+/* |                                                 | */
+/* +-------------------------------------------------+ */
 .cm-s-obsidian span.cm-hashtag {
   position: relative;
   color: var(--text-accent);
@@ -812,13 +743,14 @@ a:hover,
 .cm-s-obsidian span.cm-hashtag:hover {
   text-decoration-line: underline;
   text-decoration-color: var(--text-accent);
+  text-shadow: 0 0 0.5em var(--text-accent);
 }
 
 .cm-s-obsidian span.cm-formatting-hashtag {
   color: var(--text-faint);
 }
 
-/** tags */
+/* Tags */
 a.tag {
   background-color: var(--tag-background);
   color: var(--text-accent);
@@ -838,6 +770,7 @@ a.tag:hover {
   background-color: var(--tag-background) !important;
   text-decoration: underline !important;
   text-decoration-color: var(--text-accent);
+  text-shadow: 0 0 0.5em var(--text-accent);
 }
 
 h1 a.tag,
@@ -849,9 +782,11 @@ h6 a.tag {
   font-size: inherit !important;
 }
 
-/**-------------------**
-| INLINE CODE STYLING
-**--------------------**/
+/* +-------------------------------------------------+ */
+/* |                                                 | */
+/* |              Inline Code Styling                | */
+/* |                                                 | */
+/* +-------------------------------------------------+ */
 
 .CodeMirror-activeline
   span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(
@@ -870,22 +805,27 @@ h6 a.tag {
   min-width: 0.55rem;
 }
 
-/**-------------------**
-| HIGHLIGHTING STYLES
-**--------------------**/
+/*-------------------
+HIGHLIGHTING STYLES
+--------------------*/
+
 
 .cm-s-obsidian span.cm-formatting-highlight,
-.cm-s-obsidian span.cm-highlight {
-  background-image: none !important;
-  background-color: var(--text-highlight-bg);
-  color: #fff;
-  -webkit-text-fill-color: #fff;
-  -webkit-background-clip: initial;
+.cm-s-obsidian span.cm-highlight,
+.markdown-preview-view mark, 
+.markdown-preview-view span.highlight {
+  background-color: var(--text-highlight-bg); /* Dynamic theme variable */
+  color: #ffffff;
+  padding: 0 4px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: inline-block;
+  line-height: 1.2;
 }
 
-/**-------------------**
-| CODE FENCE STYLING
-**--------------------**/
+/*---------------------------
+PROGRAMMING CODE STYLING
+----------------------------*/
 
 .cm-s-obsidian span.code-block-flair:not(:empty) {
   color: var(--text-accent);
@@ -1001,9 +941,9 @@ pre[class$='python']:before {
   content: 'python';
 }
 
-/**-------------------**
-| BLOCKQUOTE STYLING
-**--------------------**/
+/*-------------------
+BLOCKQUOTE STYLING
+--------------------*/
 
 /* Remove blockquote left margin */
 blockquote {
@@ -1076,25 +1016,12 @@ blockquote {
   left: -1.8rem;
 }
 
-/**-------------------**
-| FRONT-META STYLING
-**--------------------**/
+/* +-------------------------------------------------+ */
+/* |                                                 | */
+/* |                 CODE STYLING                    | */
+/* |                                                 | */
+/* +-------------------------------------------------+ */
 
-.cm-s-obsidian span.cm-def,
-.cm-s-obsidian span.cm-atom {
-  color: var(--text-faint);
-}
-.cm-s-obsidian span.cm-meta {
-  color: var(--text-accent);
-}
-
-.cm-s-obsidian span.cm-string {
-  color: var(--text-sub-accent);
-}
-
-/**-------------------**
-| CODE STYLING
-**--------------------**/
 
 /** inline code */
 .cm-s-obsidian
@@ -1119,7 +1046,11 @@ blockquote {
   border-radius: 8px;
 }
 
-/** code syntax theme **/
+/* +-------------------------------------------------+ */
+/* |                                                 | */
+/* |          PROGRAMMING CODE STYLING               | */
+/* |                                                 | */
+/* +-------------------------------------------------+ */
 
 .theme-dark .cm-s-obsidian pre.HyperMD-codeblock span.cm-comment {
   color: #6272a4;
@@ -1171,20 +1102,6 @@ blockquote {
 .theme-dark .cm-s-obsidian pre.HyperMD-codeblock span.cm-type {
   color: #ffb86c;
 }
-
-/** prism.js dracular theme **/
-
-/*
-* Dracula Theme for Prism.JS
-*
-* @author Gustavo Costa
-* e-mail: gusbemacbe@gmail.com
-*
-* @contributor Jon Leopard
-* e-mail: jonlprd@gmail.com
-*
-* @license MIT 2016-2018
-*/
 
 pre::-webkit-scrollbar {
   width: 14px;
@@ -1490,4 +1407,129 @@ pre.line-numbers > code {
   display: block;
   padding-right: 0.8em;
   text-align: right;
+}
+
+.calendar-container h1 {
+  text-shadow: none !important;
+}
+
+/* +----------------------------------------+ */
+/* |              CHECKBOX STYLE            | */
+/* +----------------------------------------+ */
+
+.contains-task-list .task-list-item .contains-task-list {
+  padding-inline-start: 5px;
+}
+
+.contains-task-list .task-list-item ul.contains-task-list::before {
+  left: -46px !important;
+  border-width: 2px;
+}
+
+.contains-task-list .task-list-item {
+  position: relative;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+
+.markdown-preview-view ul > li.task-list-item {
+  text-indent: -3em;
+}
+
+.contains-task-list .task-list-item input[type='checkbox'] {
+  position: relative;
+  top: 2px;
+  left: -8px;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  opacity: 0;
+  z-index: 10;
+}
+
+.markdown-preview-view .list-collapse-indicator {
+  margin-left: -80px !important;
+  box-sizing: border-box;
+}
+
+.contains-task-list .task-list-item::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: -25px;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  justify-content: center;
+  border: 2px solid #9e9e9e;
+  margin-right: 15px;
+  border-radius: 3px;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.contains-task-list .is-checked.task-list-item::before {
+  border: 10px solid var(--text-accent);
+  animation: bounce 300ms;
+}
+
+.contains-task-list .is-checked.task-list-item::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: -21px;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transform: rotate(45deg);
+  transform-origin: 0% 100%;
+  animation: checked-box 125ms 250ms forwards;
+  z-index: 5;
+}
+
+.markdown-preview-view ul > li.task-list-item.is-checked {
+  text-decoration: line-through !important;
+  color: var(--interactive-accent) !important;
+}
+
+.markdown-preview-view ul > li.task-list-item.is-checked ul > li:not(.is-checked) {
+  text-decoration: none !important;
+  color: var(--text-normal) !important;
+}
+
+@keyframes checked-box {
+  0% {
+    width: 0;
+    height: 0;
+    border-color: #212121;
+    transform: translate(0, 0) rotate(45deg);
+  }
+  33% {
+    width: 4px;
+    height: 0;
+    border-color: #212121;
+    transform: translate(0, 0) rotate(45deg);
+  }
+  100% {
+    width: 4px;
+    height: 8px;
+    border-color: #212121;
+    transform: translate(0, -8px) rotate(45deg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    border-width: 2px;
+    /* transform: scale(1); */
+  }
+  33% {
+    border-width: 4px;
+    /* transform: scale(0.7); */
+  }
+  100% {
+    border-width: 10px;
+    /* transform: scale(1); */
+  }
 }
