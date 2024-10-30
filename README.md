@@ -1,4 +1,5 @@
-# Luminex Theme for Obsidian
+<h1 align="center">Obsidian Theme: Luminex</h1>
+
 
 ![Luminex Cover Image](Assets/Obsidian-Cover.png)
 
