@@ -560,6 +560,7 @@ strong {
   -webkit-background-clip: text; /* Vendor prefix for WebKit browsers */
   color: transparent; /* Ensure text is transparent to show gradient */
   -webkit-text-fill-color: transparent; /* Ensures color fill doesn't interfere */
+  font-weight: bold;
 }
 
 strong .math.math-inline .MathJax {
