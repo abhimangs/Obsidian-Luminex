@@ -681,6 +681,15 @@ em {
   background-color: var(--accent-opacity-10);
 }
 
+.menu-item.tappable{
+  opacity: 0.6;
+}
+.menu-item.tappable:hover,
+.menu-item.tappable:hover .menu-item-icon{
+  opacity: 1;
+  color: var(--theme-color);
+}
+
 /* +-------------------------------------------------+ */
 /* |                                                 | */
 /* |                    LINK STYLING                 | */
