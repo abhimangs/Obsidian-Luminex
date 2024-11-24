@@ -12,8 +12,6 @@
  *                                                               *
  *---------------------------------------------------------------*/
 
-/*  var(--theme-color)  */
-
 /* ~~~~~~~~ LIGHT MODE ~~~~~~~ */
 .theme-light {
   --background-primary: #ffffff;
