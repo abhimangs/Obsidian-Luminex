@@ -107,6 +107,8 @@ body {
     --slider-track-background: var(--accent-opacity-40);
 
     --background-modifier-border: var(--accent-opacity-5);
+
+    --vault-profile-color-hover: var(--theme-color);
 }
 
 /* HEADING - GRADIENT UNDERLINE STYLES */
@@ -503,8 +505,9 @@ em {
   background: var(--accent-opacity-10);
 }
 
-.mod-cta{
+button.mod-cta{
   color: var(--alt-color) !important;
+  background-color: var(--accent-opacity-80) !important;
 }
 
 .mod-cta:hover{
@@ -854,3 +857,4 @@ a:hover,
   text-decoration: none !important;
   color: var(--theme-color);
 }
+
