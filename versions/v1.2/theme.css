@@ -12,6 +12,8 @@
  *                                                               *
  *---------------------------------------------------------------*/
 
+/*  var(--theme-color)  */
+
 /* ~~~~~~~~ LIGHT MODE ~~~~~~~ */
 .theme-light {
   --background-primary: #ffffff;
@@ -79,7 +81,7 @@ body {
     rgba(0, 255, 255, 0) 100%
     );
 
-    --gradient-bold:linear-gradient(135deg, #00eaff, #ff008c);
+    --gradient-bold: linear-gradient(135deg, #00eaff, #ff008c);
     --color-hr: var(--theme-color);
     --color-italic: var(--theme-color);
     --list-marker-color: var(--theme-color);
@@ -422,12 +424,22 @@ em {
   background-image: none !important;
   background-color: var(--accent-opacity-50);
   color: var(--alt-color);
-  font-weight: bold;
   padding: 0 4px;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
   display: inline-block;
   line-height: 1.2;
+  outline: 2px solid var(--accent-opacity-80);
+}
+
+.cm-s-obsidian span.cm-formatting-highlight:hover,
+.cm-s-obsidian span.cm-highlight:hover,
+.markdown-preview-view mark:hover, 
+.markdown-preview-view span.highlight:hover {
+  text-shadow: 0 0 0.5em var(--theme-color);
+  background-color: var(--accent-opacity-10);
+  outline: 2px solid var(--theme-color);
+  color: var(--theme-color);
 }
 
 /* +-------------------------------------------------+ */
@@ -671,11 +683,16 @@ em {
 
 /* +-------------------------------------------------+ */
 /* |                                                 | */
-/* |                 LINKS STYLING                   | */
+/* |                    LINK STYLING                 | */
 /* |                                                 | */
 /* +-------------------------------------------------+ */
 
-@keyframes hoverFillinternal {
+/* +-------------------------------------------------+ */
+/* |                    ANIMATIONS                   | */
+/* +-------------------------------------------------+ */
+
+/* Hover animation to expand the background highlight */
+@keyframes hoverFill {
   0% {
     background-size: 100% 18%;
     background-position: 0 100%;
@@ -686,7 +703,8 @@ em {
   }
 }
 
-@keyframes unhoverFillinternal {
+/* Unhover animation to shrink the background highlight */
+@keyframes unhoverFill {
   0% {
     background-size: 100% 100%;
     background-position: 0 100%;
@@ -697,98 +715,133 @@ em {
   }
 }
 
-/* +-------------------------------+ */
-/* |        INTERNAL  LINKS        | */
-/* +-------------------------------+ */
+/* +-------------------------------------------------+ */
+/* |                  LINK STYLING                   | */
+/* +-------------------------------------------------+ */
 
-.cm-hmd-internal-link .cm-underline {
-  text-decoration: none !important;
+/** Styling for links in Editor Mode **/
+/* Ensures consistent color, background, and text-fill for internal links in the editor. */
+.cm-s-obsidian span.cm-link:not(.cm-formatting-link) .cm-underline,
+.cm-s-obsidian span.cm-hmd-internal-link .cm-underline {
   color: var(--theme-color);
-  background: linear-gradient(var(--accent-opacity-70), var(--accent-opacity-70));
-  background-size: 100% 18%;
+  -webkit-text-fill-color: var(--alt-color);
   background-position: 0 100%;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+  background-size: 5px 2px;
+  text-decoration: none;
+}
+.cm-s-obsidian span.cm-hmd-internal-link .cm-underline{
   font-weight: bold;
 }
-
-.cm-hmd-internal-link .cm-underline:hover {
-  animation: hoverFillinternal 0.5s forwards;
-  color: var(--alt-color);
-  text-decoration: none !important;
+/* Adds a subtle gradient to the underline in editor mode. */
+.cm-s-obsidian span.cm-link:not(.cm-formatting-link) .cm-underline {
+  background-image: linear-gradient(
+    to bottom,
+    var(--sub-accent-60) 0%,
+    var(--sub-accent-60) 100%
+  );
 }
 
-.cm-hmd-internal-link .cm-underline:not(:hover) {
-  animation: unhoverFillinternal 0.5s forwards;
-  text-decoration: none !important;
+/* Dims the color of Markdown formatting characters for links. */
+.cm-s-obsidian span.cm-formatting-link {
+  color: var(--theme-color) !important;
+  opacity: 0.25;
 }
 
-.cm-hmd-internal-link .cm-underline {
-  text-decoration-skip-ink: none;
-}
-
-/* +-------------------------------+ */
-/* |        EXTERNAL  LINKS        | */
-/* +-------------------------------+ */
-
-.cm-link .cm-underline {
-  text-decoration: none !important;
-  color: var(--alt-color) !important;
-  background: linear-gradient(var(--sub-accent-60), var(--sub-accent-60));
-  background-size: 100% 18%;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-}
-
-.cm-link .cm-underline:hover {
-  animation: hoverFillinternal 0.5s forwards;
-  color: var(--sub-accent);
-  text-decoration: none !important;
-}
-
-.cm-link .cm-underline:not(:hover) {
-  animation: unhoverFillinternal 0.5s forwards;
-  text-decoration: none !important;
-}
-
-.cm-link .cm-underline {
-  text-decoration-skip-ink: none;
-}
-
+/** Styling for links in Preview Mode **/
+/* Ensures preview mode links have consistent padding and background behavior. */
 .external-link {
-  background: none !important;
-  content: none !important;
+  padding: 0;
 }
 
-/* +-------------------------------+ */
-/* |    INTERNAL  LINKS PREVIEW    | */
-/* +-------------------------------+ */
+/* Shared base styling for internal and external links in preview mode, 
+   including animations and transitions. */
+.internal-link,
+.external-link {
+  color: var(--alt-color);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 100% 18%;
+  text-decoration: none;
+  transition: background 350ms ease-in-out;
+  background-image: linear-gradient(
+    to bottom,
+    var(--sub-accent-60) 0%,
+    var(--sub-accent-60) 100%
+  );
+}
 
-.el-p a,
-.markdown-preview-sizer.markdown-preview-section a{
+/* Applies unhover animation to internal and external links. */
+.cm-s-obsidian span.cm-link:not(.cm-formatting-link) .cm-underline,
+.external-link {
+  animation: unhoverFill 0.5s forwards;
+  transition: background 350ms ease-in-out;
+}
+
+/* Adds a different gradient for internal links. */
+.cm-s-obsidian span.cm-hmd-internal-link .cm-underline,
+.internal-link {
+  background-image: linear-gradient(
+    to bottom,
+    var(--accent-opacity-50) 0%,
+    var(--accent-opacity-50) 100%
+  );
+  animation: unhoverFill 0.5s forwards;
+  transition: background 350ms ease-in-out;
+}
+
+/** Hover Effects **/
+/* Changes background size and color smoothly for internal links on hover. */
+.internal-link:hover,
+.cm-s-obsidian span.cm-hmd-internal-link .cm-underline:hover {
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+  animation: hoverFill 0.5s forwards;
+  background-size: 4px 50px;
+  text-decoration: none !important;
+}
+
+/* Changes background size and color smoothly for external links on hover. */
+.cm-s-obsidian span.cm-link:not(.cm-formatting-link) .cm-underline:hover,
+.external-link:hover {
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+  animation: hoverFill 0.5s forwards;
+  background-size: 4px 50px;
+  text-decoration: none !important;
+}
+
+/* +-------------------------------------------------+ */
+/* |                GENERAL LINK STYLING             | */
+/* +-------------------------------------------------+ */
+
+/* Base styling for all links, ensuring they share consistent colors and z-index behavior. */
+a,
+.internal-link,
+.cm-hmd-internal-link,
+.cm-link {
+  text-decoration: none !important;
+  color: var(--alt-color);
+  position: relative;
+  z-index: 1;
+}
+
+/* Styling for URL text, reducing opacity for a cleaner appearance. */
+.cm-url {
+  color: var(--theme-color) !important;
+  opacity: 0.4;
+  font-weight: normal;
+}
+
+/* Adjusts opacity for Markdown formatting used in image links. */
+.cm-formatting-image {
+  color: var(--theme-color) !important;
+  opacity: 0.7;
+}
+
+/* Ensures hover links retain their color consistency in all contexts. */
+a:hover,
+.internal-link:hover {
   text-decoration: none !important;
   color: var(--theme-color);
-  background: linear-gradient(var(--accent-opacity-70), var(--accent-opacity-70));
-  background-size: 100% 18%;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  font-weight: bold;
 }
-
-.el-p a:hover,
-.markdown-preview-sizer.markdown-preview-section a:hover {
-  animation: hoverFillinternal 0.5s forwards;
-  color: var(--alt-color);
-  text-decoration: none !important;
-}
-
-.el-p a:not(:hover),
-.markdown-preview-sizer.markdown-preview-section a:not(:hover) {
-  animation: unhoverFillinternal 0.5s forwards;
-  text-decoration: none !important;
-}
-
-/* +-------------------------------+ */
-/* |    EXTERNAL  LINKS PREVIEW    | */
-/* +-------------------------------+ */
-
-
