@@ -12,8 +12,6 @@
  *                                                               *
  *---------------------------------------------------------------*/
 
-/*  var(--theme-color)  */
-
 /* ~~~~~~~~ LIGHT MODE ~~~~~~~ */
 .theme-light {
   --background-primary: #ffffff;
@@ -856,4 +854,40 @@ a:hover,
 .internal-link:hover {
   text-decoration: none !important;
   color: var(--theme-color);
+}
+
+/* +-------------------------------------------------+ */
+/* |                                                 | */
+/* |                  META DATA STYLING              | */
+/* |                                                 | */
+/* +-------------------------------------------------+ */
+
+.metadata-properties-heading:hover .collapse-indicator.collapse-icon svg{
+  color: var(--theme-color);
+}
+
+.metadata-property-value .clickable-icon{
+  opacity: 0.6;
+}
+
+.metadata-property-value .clickable-icon:hover{
+  opacity: 1;
+  color: var(--theme-color);
+  background-color: var(--accent-opacity-10);
+  transition: 100ms;
+}
+
+.metadata-add-button.text-icon-button:hover .text-button-icon{
+  color: var(--theme-color);
+}
+
+.metadata-add-button.text-icon-button:hover{
+  color: var(--theme-color);
+  background-color: var(--accent-opacity-10);
+  outline: 2px solid var(--accent-opacity-40);
+}
+
+.metadata-property:hover{
+  background-color: var(--accent-opacity-5);
+  outline: 2px solid var(--accent-opacity-50);
 }
