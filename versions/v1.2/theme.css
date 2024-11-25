@@ -432,16 +432,6 @@ em {
   outline: 2px solid var(--accent-opacity-80);
 }
 
-.cm-s-obsidian span.cm-formatting-highlight:hover,
-.cm-s-obsidian span.cm-highlight:hover,
-.markdown-preview-view mark:hover, 
-.markdown-preview-view span.highlight:hover {
-  text-shadow: 0 0 0.5em var(--theme-color);
-  background-color: var(--accent-opacity-10);
-  outline: 2px solid var(--theme-color);
-  color: var(--theme-color);
-}
-
 /* +-------------------------------------------------+ */
 /* |                                                 | */
 /* |                 SETTINGS MENU                   | */
@@ -518,20 +508,20 @@ button.mod-cta{
 
 /* +-------------------------------------------------+ */
 /* |                                                 | */
-/* |         LEFT SIDE DOCK COMPLETE STYLING         | */
+/* |             LEFT SIDE DOCK STYLING              | */
 /* |                                                 | */
 /* +-------------------------------------------------+ */
 
-.clickable-icon.side-dock-ribbon-action{
-  opacity: 0.6;
+.clickable-icon.side-dock-ribbon-action,
+.workspace-split.mod-horizontal.mod-sidedock.mod-left-split .nav-buttons-container .clickable-icon.nav-action-button{
+  opacity: 0.8;
 }
 
-.clickable-icon.side-dock-ribbon-action:hover{
+.clickable-icon.side-dock-ribbon-action:hover,
+.workspace-split.mod-horizontal.mod-sidedock.mod-left-split .nav-buttons-container .clickable-icon.nav-action-button:hover{
   opacity: 1;
   color: var(--theme-color);
   background: var(--accent-opacity-20);
-  outline: 2px solid var(--accent-opacity-70);
-  transition: 100ms;
 }
 
 .sidebar-toggle-button.mod-left .clickable-icon:hover{
@@ -541,7 +531,7 @@ button.mod-cta{
 .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left .clickable-icon{
   color: var(--theme-color);
   background: var(--accent-opacity-10);
-  outline: 3px solid var(--accent-opacity-50);
+  outline: 3px solid var(--accent-opacity-60);
 }
 
 .tooltip{
@@ -549,33 +539,10 @@ button.mod-cta{
   text-shadow: 0 0 0.5em var(--accent-opacity-30);
 }
 
-.workspace-tab-header-container .workspace-tab-header-container-inner 
-.workspace-tab-header.tappable.is-active .workspace-tab-header-inner-icon{
-  color: var(--theme-color);
-}
-
-.workspace-split.mod-horizontal.mod-sidedock.mod-left-split .workspace-tab-header.tappable.is-active .workspace-tab-header-inner{
-  background: var(--accent-opacity-10);
-}
-
-.workspace-split.mod-horizontal.mod-sidedock.mod-left-split .workspace-tab-header.tappable:hover{
-  background: var(--accent-opacity-10);
-}
-
-.workspace-split.mod-horizontal.mod-sidedock.mod-left-split .workspace-tab-header.tappable:hover .workspace-tab-header-inner-icon{
-  color: var(--theme-color);
-}
-
 .workspace-drawer-vault-actions .clickable-icon:hover{
   color: var(--theme-color);
-  background: var(--accent-opacity-10);
+  background: var(--accent-opacity-20);
   transition: 100ms;
-}
-
-.workspace-split.mod-horizontal.mod-sidedock.mod-left-split .nav-buttons-container .clickable-icon.nav-action-button:hover{
-  color: var(--theme-color);
-  background: var(--accent-opacity-10);
-  outline: 2px solid var(--accent-opacity-50);
 }
 
 /* +-----------------------------+ */
@@ -609,15 +576,12 @@ button.mod-cta{
 /* |                                                 | */
 /* +-------------------------------------------------+ */
 
-.workspace-tab-header-new-tab .clickable-icon:hover{
-  color: var(--theme-color);
-  background-color: var(--accent-opacity-10);
-  outline: 2px solid var(--accent-opacity-50);
-}
-
+/* Add new tab and the right side dock button hover */
+.workspace-tab-header-new-tab .clickable-icon:hover,
 .sidebar-toggle-button.mod-right .clickable-icon:hover{
   color: var(--theme-color);
-  background: var(--accent-opacity-20);}
+  background-color: var(--accent-opacity-20);
+}
 
 .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right .clickable-icon{
   color: var(--theme-color);
@@ -625,29 +589,9 @@ button.mod-cta{
   outline: 3px solid var(--accent-opacity-50);
 }
 
-.workspace-tab-header-tab-list .clickable-icon:hover{
-  color: var(--theme-color);
-  background-color: var(--accent-opacity-10);
-}
-
-.workspace-tab-header-container .workspace-tab-header-container-inner 
-.workspace-tab-header.tappable.is-active .workspace-tab-header-inner-icon{
-  color: var(--theme-color);
-}
-
-.workspace-split.mod-horizontal.mod-sidedock.mod-right-split .workspace-tab-header.tappable.is-active .workspace-tab-header-inner{
-  background: var(--accent-opacity-10);
-}
-
-.workspace-tab-header-container-inner .workspace-tab-header.tappable 
-.workspace-tab-header-inner:hover .workspace-tab-header-inner-icon{
-  color: var(--theme-color);
-}
-
-.workspace-tab-header-container-inner .workspace-tab-header.tappable 
-.workspace-tab-header-inner:hover{
-  background-color: var(--accent-opacity-20);
-}
+/* +-------------------------------------------------+ */
+/* |           MINIMIZE, MAXIMIZE & CLOSE            | */
+/* +-------------------------------------------------+ */
 
 .titlebar-button-container.mod-right .titlebar-button.mod-minimize:hover,
 .titlebar-button-container.mod-right .titlebar-button.mod-maximize:hover{
@@ -671,6 +615,11 @@ button.mod-cta{
   animation: pulse 1s ease-in-out infinite;
   color: var(--alt-color);
 }
+
+.workspace-tab-header-inner-close-button:hover svg{
+  color: var(--theme-color);
+}
+
 
 /* +-------------------------------------------------+ */
 /* |                   TITLE BAR                     | */
@@ -888,6 +837,5 @@ a:hover,
 }
 
 .metadata-property:hover{
-  background-color: var(--accent-opacity-5);
-  outline: 2px solid var(--accent-opacity-50);
+  outline: 2px solid var(--accent-opacity-40);
 }
