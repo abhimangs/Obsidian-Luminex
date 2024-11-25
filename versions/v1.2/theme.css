@@ -1,16 +1,12 @@
-/*---------------------------------------------------------------
- *                                                               *
- *                           LUMINEX                             *
- *                         Version 1.2                           *
- *                     Created by @abhimangs                     *
- *                                                               *
- *      Readme:                                                  *
- *      https://github.com/abhimangs/Obsidian-Luminex            *
- *                                                               *
- *      For problems, contact:                                   *
- *      theabhimangs@gmail.com                                   *
- *                                                               *
- *---------------------------------------------------------------*/
+/******************************************************************
+ *                                                                
+ *                        ＬＵＭＩＮＥＸ  |  V1.2                  
+ *                Crafted with 💖 by @abhimangs                  
+ *                                                                
+ * 📚 Readme: https://github.com/abhimangs/Obsidian-Luminex      
+ * ✉️ Contact: theabhimangs@gmail.com                            
+ *                                                               
+ ******************************************************************/
 
 /* ~~~~~~~~ LIGHT MODE ~~~~~~~ */
 .theme-light {
@@ -35,8 +31,6 @@ body {
   --theme-color: var(--color-accent);
   --sub-accent: #f4569d;
   --sub-accent-60: color-mix(in srgb, var(--sub-accent) 60%, transparent);
-  --internal-link-color: #ffffff;
-  --external-link-color: #ffe600;
 
   /* FONTS STYLING */
   --default-font: Rubik, Segoe UI, Roboto, Arial, sans-serif, sans-serif;
@@ -926,6 +920,151 @@ a:hover,
 
 .metadata-property:hover{
   outline: 2px solid var(--accent-opacity-40);
+}
+
+/*----------------------
+INLINE CODING STYLING
+------------------------*/
+.cm-s-obsidian
+  span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(
+    .obsidian-search-match-highlight
+  ),
+.markdown-preview-view code {
+  overflow-wrap: break-word;
+  background-color: var(--accent-opacity-10); /* Light background for inline code */
+  word-wrap: break-word;
+  padding: 0 5px;
+  border-radius: 0.3rem; /* Rounded corners */
+  color: var(--theme-color) !important; /* Text color */
+}
+
+.theme-dark :not(pre) > code[class*='language-'],
+.theme-dark pre[class*='language-'] {
+  background-color: var(--background-secondary);
+}
+
+/* Inline code for light/dark modes */
+:not(pre) > code[class*='language-'] {
+  padding: 4px 7px;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+/*------------------------------
+PROGRAMMING LANGUAGES STYLING
+-------------------------------*/
+.cm-s-obsidian span.code-block-flair:not(:empty) {
+  color: var(--theme-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  background: var(--accent-darker-70);
+  border-radius: 8px;
+  padding: 0.1em 0.8em;
+  margin-top: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+.cm-s-obsidian pre.HyperMD-codeblock {
+  color: var(--sub-accent);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-bg {
+  background-color: var(--accent-opacity-5);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg {
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+  border: none;
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg:before {
+  position: absolute;
+  content: '';
+  top: -5%;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  margin-top: 1.5em;
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+  background-color: var(--accent-opacity-5);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
+  border-bottom-left-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+  border: none;
+}
+
+pre {
+  position: relative;
+}
+
+pre[class*='language-']:before {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.6rem;
+  color: #fff;
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  padding: 0;
+  color: var(--theme-color) !important;
+  content: '';
+  text-transform: uppercase;
+  background: var(--accent-opacity-5);
+  border-radius: 8px;
+  padding: 0.1em 0.8em;
+  z-index: 10;
+}
+
+pre[class$='javascript']:before,
+pre[class$='js']:before {
+  content: 'JavaScript';
+}
+
+pre[class$='typescript']:before,
+pre[class$='ts']:before {
+  content: 'typescript';
+}
+
+pre[class$='html']:before {
+  content: 'html';
+}
+
+pre[class$='css']:before {
+  content: 'css';
+}
+
+pre[class$='ejs']:before {
+  content: 'ejs';
+}
+
+pre[class$='vue']:before {
+  content: 'vue';
+}
+
+pre[class$='react']:before {
+  content: 'react';
+}
+
+pre[class$='shell']:before {
+  content: 'Shell';
+}
+
+pre[class$='powershell']:before {
+  content: 'PowerShell';
+}
+
+pre[class$='json']:before {
+  content: 'Json';
+}
+
+pre[class$='python']:before {
+  content: 'python';
 }
 
 /* +-------------------------------------------------+ */
