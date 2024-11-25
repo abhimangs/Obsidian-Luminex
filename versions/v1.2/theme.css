@@ -927,3 +927,34 @@ a:hover,
 .metadata-property:hover{
   outline: 2px solid var(--accent-opacity-40);
 }
+
+/* +-------------------------------------------------+ */
+/* |                                                 | */
+/* |                  PLUGIN SUPPORT                 | */
+/* |                                                 | */
+/* +-------------------------------------------------+ */
+
+/* ╔═══════════════════════════╗ */
+/* ║         Calender          ║ */
+/* ╚═══════════════════════════╝ */
+
+
+#calendar-container .nav .title{
+  text-shadow: unset;
+}
+
+#calendar-container .nav .title .year{
+  color: var(--theme-color);
+}
+#calendar-container .nav .title .month{
+  color: var(--alt-color);
+}
+
+#calendar-container .nav .right-nav .arrow:hover svg{
+  color: var(--theme-color);
+}
+
+#calendar-container .nav .right-nav .reset-button:hover{
+  color: var(--theme-color);
+  text-shadow: 0 0 1em var(--theme-color);
+}
