@@ -513,15 +513,17 @@ button.mod-cta{
 /* +-------------------------------------------------+ */
 
 .clickable-icon.side-dock-ribbon-action,
-.workspace-split.mod-horizontal.mod-sidedock.mod-left-split .nav-buttons-container .clickable-icon.nav-action-button{
+.workspace-split.mod-horizontal.mod-sidedock.mod-left-split .nav-buttons-container .clickable-icon.nav-action-button,
+.workspace-split.mod-horizontal.mod-sidedock.mod-right-split .nav-buttons-container .clickable-icon.nav-action-button{
   opacity: 0.8;
 }
 
 .clickable-icon.side-dock-ribbon-action:hover,
-.workspace-split.mod-horizontal.mod-sidedock.mod-left-split .nav-buttons-container .clickable-icon.nav-action-button:hover{
+.workspace-split.mod-horizontal.mod-sidedock.mod-left-split .nav-buttons-container .clickable-icon.nav-action-button:hover,
+.workspace-split.mod-horizontal.mod-sidedock.mod-right-split .nav-buttons-container .clickable-icon.nav-action-button:hover{
   opacity: 1;
   color: var(--theme-color);
-  background: var(--accent-opacity-20);
+  background: var(--accent-opacity-10);
 }
 
 .sidebar-toggle-button.mod-left .clickable-icon:hover{
@@ -570,11 +572,97 @@ button.mod-cta{
   background-color: var(--accent-opacity-20) !important;
 }
 
+/* +-------------------------------------------------------------+ */
+/* |                                                             | */
+/* |    LEFT & RIGHT DOCK HEADER STYLING FOR HOVER AND ACTIVE    | */
+/* |                                                             | */
+/* +-------------------------------------------------------------+ */
+
+.workspace-split.mod-horizontal.mod-sidedock.mod-left-split 
+.workspace-tab-header.tappable,
+
+.workspace-split.mod-horizontal.mod-sidedock.mod-right-split 
+.workspace-tab-header.tappable {
+  opacity: 0.8;
+}
+
+.workspace-split.mod-horizontal.mod-sidedock.mod-left-split 
+.workspace-tab-header.tappable.is-active 
+.workspace-tab-header-inner-icon,
+
+.workspace-split.mod-horizontal.mod-sidedock.mod-right-split 
+.workspace-tab-header.tappable.is-active 
+.workspace-tab-header-inner-icon{
+  opacity: 1;
+  color: var(--theme-color);
+}
+
+.workspace-split.mod-horizontal.mod-sidedock.mod-left-split 
+.workspace-tab-header.tappable.is-active,
+
+.workspace-split.mod-horizontal.mod-sidedock.mod-right-split 
+.workspace-tab-header.tappable.is-active {
+  opacity: 1;
+  background-color: var(--accent-opacity-20);
+}
+
+.workspace-split.mod-horizontal.mod-sidedock.mod-left-split 
+.workspace-tab-header.tappable:hover 
+.workspace-tab-header-inner-icon,
+
+.workspace-split.mod-horizontal.mod-sidedock.mod-right-split 
+.workspace-tab-header.tappable:hover 
+.workspace-tab-header-inner-icon{
+  opacity: 1;
+  color: var(--theme-color);
+}
+
+.workspace-split.mod-horizontal.mod-sidedock.mod-left-split 
+.workspace-tab-header.tappable:hover,
+
+.workspace-split.mod-horizontal.mod-sidedock.mod-right-split 
+.workspace-tab-header.tappable:hover {
+  opacity: 1;
+  background-color: var(--accent-opacity-5);
+}
+
 /* +-------------------------------------------------+ */
 /* |                                                 | */
-/* |         TOP BAR AND RIGHT DOCK STYLING          | */
+/* |                 TOP BAR STYLING                 | */
 /* |                                                 | */
 /* +-------------------------------------------------+ */
+
+/* MD FILE HEADING TABS STYLING
+-------------------------------- */
+.workspace-split.mod-vertical.mod-root 
+.workspace-tab-header.tappable.is-active 
+.workspace-tab-header-inner{
+  color: var(--theme-color);
+  background-color: var(--accent-opacity-20);
+  border: 2px solid var(--theme-color);
+  border-radius: 8px;
+}
+
+.workspace-split.mod-vertical.mod-root 
+.workspace-tab-header.tappable 
+.workspace-tab-header-inner{
+  border: 2px solid transparent;
+  border-radius: 8px;
+}
+
+.workspace-split.mod-vertical.mod-root 
+.workspace-tab-header.tappable:hover
+.workspace-tab-header-inner{
+  color: var(--theme-color);
+  text-shadow: 0 0 0.5em var(--theme-color);
+  background-color: var(--accent-opacity-20);
+}
+
+.workspace-split.mod-vertical.mod-root 
+.workspace-tab-header.tappable.is-active:hover 
+.workspace-tab-header-inner{
+  text-shadow: unset;
+}
 
 /* Add new tab and the right side dock button hover */
 .workspace-tab-header-new-tab .clickable-icon:hover,
