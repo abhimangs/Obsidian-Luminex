@@ -1073,42 +1073,30 @@ pre[class$='python']:before {
   content: 'python';
 }
 
-
-
-
-
-
-
-
-
+/* +-------------------------------------------------+ */
+/* |                                                 | */
+/* |               BLOCK QUOTE STYLING               | */
+/* |                                                 | */
+/* +-------------------------------------------------+ */
 .HyperMD-quote {
   color: var(--theme-color);
   background-color: var(--accent-opacity-5) !important;
-  border: 2px solid transparent;
+  border: 2px solid var(--theme-color);
+  text-shadow: 0 0 0.5em var(--theme-color);
   border-radius: 10px;
   background-clip: padding-box;
-  box-shadow: inset 0 0 0 2px var(--theme-color);
+  font-weight: bold;
+  box-shadow: 0 0 10px var(--accent-opacity-30);
 }
 
+.HyperMD-quote.HyperMD-quote-1.cm-line{
+  padding: 1rem;
+  margin-bottom: 15px !important;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.HyperMD-quote .cm-transparent{
+  text-shadow: none;
+}
 
 /* +-------------------------------------------------+ */
 /* |                                                 | */
