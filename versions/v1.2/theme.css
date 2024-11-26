@@ -101,6 +101,8 @@ body {
     --background-modifier-border: var(--accent-opacity-5);
 
     --vault-profile-color-hover: var(--theme-color);
+
+    --blockquote-border-thickness: unset;
 }
 
 /* HEADING - GRADIENT UNDERLINE STYLES */
@@ -922,9 +924,11 @@ a:hover,
   outline: 2px solid var(--accent-opacity-40);
 }
 
-/*----------------------
-INLINE CODING STYLING
-------------------------*/
+/* +-------------------------------------------------+ */
+/* |                                                 | */
+/* |              INLINE CODING STYLING              | */
+/* |                                                 | */
+/* +-------------------------------------------------+ */
 .cm-s-obsidian
   span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(
     .obsidian-search-match-highlight
@@ -950,9 +954,11 @@ INLINE CODING STYLING
   white-space: normal;
 }
 
-/*------------------------------
-PROGRAMMING LANGUAGES STYLING
--------------------------------*/
+/* +-------------------------------------------------+ */
+/* |                                                 | */
+/* |         PROGRAMMING LANGUAGES STYLING           | */
+/* |                                                 | */
+/* +-------------------------------------------------+ */
 .cm-s-obsidian span.code-block-flair:not(:empty) {
   color: var(--theme-color);
   font-weight: 600;
@@ -1066,6 +1072,43 @@ pre[class$='json']:before {
 pre[class$='python']:before {
   content: 'python';
 }
+
+
+
+
+
+
+
+
+
+.HyperMD-quote {
+  color: var(--theme-color);
+  background-color: var(--accent-opacity-5) !important;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-clip: padding-box;
+  box-shadow: inset 0 0 0 2px var(--theme-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* +-------------------------------------------------+ */
 /* |                                                 | */
