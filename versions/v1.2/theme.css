@@ -1107,8 +1107,6 @@ pre[class$='python']:before {
 /* ╔═══════════════════════════╗ */
 /* ║         Calender          ║ */
 /* ╚═══════════════════════════╝ */
-
-
 #calendar-container .nav .title{
   text-shadow: unset;
 }
