@@ -1,7 +1,7 @@
 <h1 align="center">Obsidian Theme: Luminex</h1>
 
 
-![Luminex Cover Image](Assets/Obsidian-Cover.png)
+![Luminex Cover Image](assets/cover-obsidian.png)
 
 ## Features
 
