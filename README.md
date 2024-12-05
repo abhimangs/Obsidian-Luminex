@@ -3,35 +3,24 @@
 
 ![Luminex Cover Image](assets/cover-obsidian.png)
 
-## Features
 
-- **Aesthetic Design:** A modern and sleek interface that enhances your Obsidian experience.
-- **Customizable Colors:** Easily change the color scheme to suit your preference.
-- **Responsive Layout:** Optimized for both desktop and mobile views.
 
-## Installation
+# ⚠️ Luminex is Now Archived  
 
-1. Download the Luminex theme from the repository.
-2. Open Obsidian and go to **Settings** > **Appearance**.
-3. In the **Themes** section, click on **Manage**.
-4. Click on **Open Themes Folder**.
-5. Place the downloaded theme file in the folder.
-6. Select the Luminex theme from the list of installed themes.
+Luminex has evolved into **[Vortex](https://github.com/abhimangs/obsidian-vortex)**, a completely reimagined Obsidian theme with exciting new features and enhancements!  
 
-## Settings
+## 🚀 What's New in Vortex:  
+- 🎨 **Customizable Accent Colors**: Personalize your workspace with infinite color possibilities.  
+- 🖋️ **Enhanced Heading Styles**: Neon glow effects and gradient underlines for stunning aesthetics.  
+- 🔗 **Interactive Links**: Smooth hover animations for a dynamic user experience.  
+- 💬 **Custom Callouts**: Stylish callouts with built-in icons to make your notes visually appealing.  
+- 🌗 **Improved Light and Dark Modes**: Seamless transitions and modern styling for both modes.  
 
-- To customize the colors, navigate to **Settings** > **Appearance** > **CSS Snippets**.
-- Enable the desired snippets to apply the custom styles.
+Upgrade to **Vortex** today for a superior note-taking experience! 🎉  
 
-## Plugin Support
 
-Luminex theme is compatible with popular plugins like:
 
-- **Daily Notes**
-- **Calendar**
-- **Kanban**
 
-For best results, ensure you have the latest versions of these plugins installed.
 
 ## Feedback
 
