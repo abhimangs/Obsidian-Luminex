@@ -1,13 +1,14 @@
 <h1 align="center">Obsidian Theme: Luminex</h1>
 
 
-![Luminex Cover Image](assets/cover-obsidian.png)
 
 
 
-# ⚠️ Luminex is Now Archived  
 
-Luminex has evolved into **[Vortex](https://github.com/abhimangs/obsidian-vortex)**, a completely reimagined Obsidian theme with exciting new features and enhancements!  
+### ⚠️ Luminex is Now Archived  
+
+## Luminex has evolved into **[Vortex](https://github.com/abhimangs/obsidian-vortex)**
+A completely reimagined Obsidian theme with exciting new features and enhancements!  
 
 ## 🚀 What's New in Vortex:  
 - 🎨 **Customizable Accent Colors**: Personalize your workspace with infinite color possibilities.  
@@ -19,7 +20,7 @@ Luminex has evolved into **[Vortex](https://github.com/abhimangs/obsidian-vortex
 Upgrade to **Vortex** today for a superior note-taking experience! 🎉  
 
 
-
+![Luminex Cover Image](assets/cover-obsidian.png)
 
 
 ## Feedback
