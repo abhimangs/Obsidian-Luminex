@@ -7,7 +7,7 @@
 
 ### ⚠️ Luminex is Now Archived  
 
-## Luminex has evolved into **[Vortex](https://github.com/abhimangs/obsidian-vortex)**
+## Luminex has evolved into [Vortex](https://github.com/abhimangs/obsidian-vortex)
 A completely reimagined Obsidian theme with exciting new features and enhancements!  
 
 ## 🚀 What's New in Vortex:  
